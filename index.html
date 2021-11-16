@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@400;700&family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
     <title>PageLib</title>
+    <script src="scripts/menus.js" defer></script>
 </head>
 <body>
     <header>
         <div class="header container">
-            <a href="index.html" class="logo" title="Accueil"><img src="img/Logo.png" alt="PageLib"></a>
-            <div class="header-divider"></div>
+            <div class="header-left">
+                <a href="index.html" class="logo" title="Accueil"><img src="img/Logo.png" alt="PageLib"></a>
+                <!-- <div class="header-divider"></div> -->
+                <div class="search">
+                    <form name="search" action="livres.html" method="get">
+                        <input type="text" name="livre" placeholder="Rechercher un livre">
+                        <label>
+                            <input type="submit" style="display: none;">
+                            <i class="fas fa-search"></i>
+                        </label>
+                    </form>
+                </div>
+            </div>
             <nav>
-                    <a href="livres.html" title="Livres">Nos Livres</a>
-                    <a href="pres.html" title="Presentation">Qui sommes-nous ?</a>
-                    <a href="index.html" title="Accueil">Accueil</a>
-                    <a href="equipe.html" title="&Eacute;quipe">Notre équipe</a>
-                    <a href="contact.html" title="Contact">Nous contacter</a>
+                <a href="livres.html" title="Livres">Nos Livres</a>
+                <a href="pres.html" title="Presentation">Qui sommes-nous ?</a>
+                <a href="index.html" title="Accueil">Accueil</a>
+                <a href="equipe.html" title="&Eacute;quipe">Notre équipe</a>
+                <a href="contact.html" title="Contact">Nous contacter</a>
             </nav>
         </div>
     </header>
@@ -67,8 +78,8 @@
                     <a href="#" title="@pagelib : Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#" title="PageLib : Facebook"><i class="fab fa-facebook-square"></i></a>
                     <a href="#" title="PageLib : Youtube"><i class="fab fa-youtube"></i></a>
-                
-                </div></section>
+                </div>
+            </section>
         </footer>
         </div>
 </body>
