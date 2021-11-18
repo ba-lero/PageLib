@@ -79,7 +79,79 @@ main {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
 }
-
+.divindex {
+    text-align: center;
+    background-image: url(/img/librairie.jpg);
+    background-size: cover;
+    padding: 15%;
+    padding-top: 5%;
+    margin: 0%;
+    color: #DFA005;
+}
+.pindex {
+    color: #e0e0e0;
+}
+.mainpres {
+    margin: 7%;
+}
+.listpres {
+    margin-top: 10px;
+}
+.mainequipe {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3%;
+    justify-content: center;
+}
+.divequipe {
+    width: 30%;
+    margin: 10px;
+    background-color: #05102E;
+    color: #FEFEFE;
+    padding: 2%;
+}
+@media screen and (max-width: 1200px){
+    .divequipe {
+        width: 60%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+}
+.headequipe {
+    text-align: center;
+    color: #DFA005;
+}
+.maincontact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 7%;
+}
+.headcontact {
+    text-decoration: underline;
+}
+.divcontact {
+    margin-top: 2%;
+}
+.divcontactgauche {
+    width: 40%;
+}
+.divcontacdroite {
+    width: 60%;
+}
+@media screen and (max-width: 1200px){
+    .divcontactgauche {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+}
+.buttons {
+    text-align: center;
+    background-color: #05102E;
+    color: #FEFEFE;
+    border-radius: 10px;
+    padding: 0.5% 2%;
+}
 footer {
     background-color: #e0e0e0;
 }
