@@ -85,13 +85,16 @@
                     <h3>Nouveau Livre</h3>
                     <form action="#" name="new-book">
                         <label for="new-book-title">Titre</label>
-                        <input type="text" id="new-book-title" name='new-book-title'>
+                        <input type="text" id="new-book-title" name='new-book-title' placeholder="Obligatoire" required>
                         <label for="new-book-author">Auteur</label>
-                        <input type="text" id="new-book-author" name='new-book-author'>
+                        <input type="text" id="new-book-author" name='new-book-author' placeholder="Obligatoire" required>
                         <label for="new-book-summary">Resumé</label>
-                        <textarea id="new-book-summary" name='new-book-summary' cols="30" rows="5"></textarea>
+                        <textarea id="new-book-summary" name='new-book-summary' cols="30" rows="5" placeholder="Optionnel"></textarea>
                         <label for="new-book-cover">Couverture</label>
-                        <input type="file" id="new-book-cover" name='new-book-cover' accept="image/png, image/jpeg" onchange="storePath()">
+                        <div style="display: flex;">
+                            <input type="file" id="new-book-cover" name='new-book-cover' accept="image/png, image/jpeg" onchange="storePath()">
+                            <p>Optionnel</p>
+                        </div>
                         <input type="submit" value="AJOUTER">
                     </form>
                     <i class="fas fa-times"></i>

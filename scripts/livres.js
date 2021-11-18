@@ -7,6 +7,32 @@ for (var i = 0; i < pairs.length; i++) {
     request[pair[0]] = pair[1];
 }
 
+function delPrecMsg () {
+    const precMsg = document.querySelector('.msg')
+    if (precMsg) {
+        precMsg.remove()
+    }
+}
+
+function displayMessage (msgType, livre = null) {
+    delPrecMsg()
+    const divider = document.querySelector('.main-divider')
+    let msg = document.createElement('div')
+    let msgCloser = document.createElement('i')
+    let msgText = document.createElement('p')
+    msg.classList.add('msg')
+    msgCloser.classList.add('fas', 'fa-times')
+    if (msgType == 'error') {
+        msg.id = 'error'
+        msgText.innerHTML = 'Identifiant de recherche invalide'
+    } else if (msgType == 'addSuccess') {
+        msg.id = 'add-success'
+        msgText.innerHTML = `Livre ajouté avec succès. <a href="#${livre[0]}">Cliquez ici</a>`
+    }
+    msg.append(msgCloser, msgText)
+    msgCloser.addEventListener('click', delPrecMsg)
+    divider.insertAdjacentElement('afterend', msg)
+}
 
 // scroll to searched book
 
@@ -18,15 +44,10 @@ window.addEventListener('load', () => {
             const livre = document.getElementById(request['livre'])
             livre.scrollIntoView({behavior : 'smooth', block: "center", inline: "nearest"});
         } catch {
-            const h1 = document.querySelector('h1')
-            let error = document.createElement('div')
-            error.id = 'error'
-            error.innerHTML = '<p>Identifiant de recherche invalide</p>'
-            h1.insertAdjacentElement('afterend', error)
+            displayMessage('error')
         }
     }
 })
-
 
 // managing books functions
 
@@ -47,6 +68,7 @@ function addLivre(livre) {
 }
 
 function delBook(el) {
+    delPrecMsg()
     let section = el.parentElement
     if (section.previousElementSibling && section.previousElementSibling.classList.contains('main-divider')) {
         section.previousElementSibling.remove()
@@ -71,10 +93,8 @@ xmlhttp.onload = function() {
   livresList = Object.entries(livres)
   let i = 1;
   for (livre of livresList) {
+    addDivider()
     addLivre(livre)
-    if (i != livresList.length) {
-        addDivider()
-    }
     i++
   }
 }
@@ -104,6 +124,7 @@ function closeBookField (target) {
 }
 function openBookField () {
     newBookField.classList.add('show')
+    let title = newBookForm.querySelector('input[name="new-book-title"]').focus()
 }
 
 // new book field listeners
@@ -121,15 +142,19 @@ newBookForm.addEventListener('submit', (e) => {
                 imgSrc : newCoverPath
         }
     ]
+    if (!livre[1].imgSrc) {
+        livre[1].imgSrc = "img/covers/no_cover.png"
+    }
     addDivider()
     addLivre(livre)
+    displayMessage('addSuccess', livre)
     newBookForm.reset()
     closeBookField()
 })
 
 fieldOpener.addEventListener("click", openBookField)
 fieldCloser.addEventListener("click", closeBookField)
-window.addEventListener('click',  (e) => {
+window.addEventListener('mousedown',  (e) => {
     if (e.target == newBookField) {
         closeBookField()
     }

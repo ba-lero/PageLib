@@ -1,14 +1,26 @@
-#error {
+.msg {
     margin-bottom: 1em;
     padding: 1em;
     font-size: 1.2em;
     width: fit-content;
     border-radius: 5pt;
-    background-color: var(--error);
     color: var(--egg-shell-white);
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
-#error p {
+.msg p {
     margin: 0;
+}
+.msg i{
+    height: fit-content;
+    font-size: 1.2em;
+}
+#error {
+    background-color: var(--error);
+}
+#add-success {
+    background-color: var(--success);
 }
 
 .top-livres {
@@ -51,15 +63,16 @@
     border: none;
     font-family: 'Raleway', sans-serif;
 }
-.btn:hover {
+.btn:hover, 
+i:hover {
     cursor: pointer;
-    opacity: 0.9;
+    opacity: 0.75;
 }
 .suppr {
     background-color: brown;
 }
 #open-new-book {
-    background-color:#4BB543;
+    background-color: var(--success);
     position: absolute;
     top: 0;
     right: 0;
@@ -117,19 +130,27 @@
     grid-template-rows: repeat(5, auto);
     gap: 1.5em;
 }
-.ajout input, .ajout label, .ajout textarea{
+.ajout input, 
+.ajout label, 
+.ajout textarea{
     font-size: 1.5em;
 }
-.ajout h3, .ajout label, .ajout input[type="file"] {
+.ajout h3, 
+.ajout label, 
+.ajout input[type="file"] {
     color: var(--primary-color);
-
 }
-.ajout input, .ajout textarea{
+.ajout input, 
+.ajout textarea{
     padding: 0.2em;
     color: var(--secondary-color);
 }
 .ajout input[type="submit"] {
     grid-column: 2;
+}
+.ajout input[name="new-book-title"]:invalid,
+.ajout input[name="new-book-author"]:invalid {
+    outline-color: red;
 }
 .ajout label {
     display: flex;
