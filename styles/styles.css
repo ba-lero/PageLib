@@ -1,48 +1,99 @@
+:root {
+    --primary-color : #DFA005;
+    --secondary-color : #05102E;
+    --secondary-lighter-color: #0e225a;
+    --secondary-border-color: #0e225a;
+    --egg-shell-white : #FEFEFE;
+    --grey: #f7f7f7;
+    --error: #B00020;
+    --success: #4BB543;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    padding-top: 10em;
 }
 
 .container {
     margin: 0 auto;
     max-width: 1500px;
+    width: 95%;
+}
 
+header, 
+footer {
+    font-family: 'Mohave', sans-serif;
+}
+main, 
+input, 
+textarea, 
+label, 
+h3 {
+    font-family: 'Raleway', sans-serif;
 }
 
 header {
-    background-color: #05102E;
-    color: #FEFEFE;
-    font-family: 'Mohave', sans-serif;
-}
-header a {
-    transition: all 0.2s ease-in-out;
+    background-color: var(--secondary-color);
+    color: var(--egg-shell-white);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 .header {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 5%;
+}
+.header-left {
+    display:flex;
+}
+.search {
+    flex: 1 0 fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    transition: font-size 0.2s ease-in-out;
+}
+.search input {
+    font-size: 1em;
+    padding: 0.2em;
+    font-family: 'Raleway', sans-serif;
+}
+.search i:hover, 
+footer i:hover {
+    opacity: 0.75;
+    cursor: pointer;
 }
 .logo {
-    padding: 1.5em 0;
-    width: 100%;
-    flex: 1 0 100%;
+    margin: 1em 0;
+    margin-right: 2em;
     display: flex;
     justify-content: center;
 }
 .logo img{
-    width: 300px;
+    width: 125px;
+    transition: width 0.2s ease-in-out;
 }
 .header-divider {
     flex: 0 0 100%;
-    background-color: #FEFEFE;
+    background-color: var(--egg-shell-white);
     height: 2px;
 }
 nav {
     width: 100%;
-    flex: 1 0 100%;
+    flex: 1 1 100%;
+    transition: flex 0.2s ease-in-out;
     display: flex;
     justify-content: space-between;
     font-weight: 500;
@@ -50,34 +101,55 @@ nav {
 nav a {
     text-decoration: none;
     text-align: center;
-    font-size: 1.3em;
-    padding: 1.5em 0 ;
+    font-size: 1.2em;
+    transition: font-size 0.2s ease-in-out;
+    padding: 1em 0 ;
     flex: 1 1 20%;
-    color: #FEFEFE;
-    border-right: #0e225a 1px dashed; /*#030b20*/
-    border-left: #0e225a 1px dashed;
+    color: var(--white);
+    border-right: var(--secondary-border-color) 1px dashed; 
+    border-left: var(--secondary-border-color) 1px dashed;
 }
-nav a:last-child {
-    border-right: none;
-}
-nav a:first-child {
-    border-left: none;
-}
+nav a:last-child, 
 nav a:last-child:hover {
     border-right: none;
 }
-nav a:first-child:hover {
-    border-left: none;
-}
-header a:hover {
-    background-color: #0e225a;
+
+nav a:hover {
+    background-color: var(--secondary-lighter-color);
     border-right: white 1px solid;
     border-left: white 1px solid;
 }
 
+.header-shrink .logo img {
+    width: 70px;
+}
+.header-shrink nav {
+    flex: 1 1 60%;
+}
+.header-shrink nav a, 
+.header-shrink .search {
+    font-size: 1em;
+}
+
 main {
-    font-family: 'Raleway', sans-serif;
     font-weight: 400;
+    padding: 1em 0;
+}
+h1 {
+    margin-top: 0;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+}
+.main-divider {
+    margin: 1em auto;
+    width: 90%;
+    height: 2px;
+    background-color: var(--grey);
 }
 .divindex {
     text-align: center;
@@ -153,12 +225,12 @@ main {
     padding: 0.5% 2%;
 }
 footer {
-    background-color: #e0e0e0;
+    background-color: var(--grey);
 }
 .footer {
-    font-family: 'Mohave', sans-serif;
-    color: #DFA005;
-    /* border-top: #0e225a 1px solid; */
+    padding-bottom: 1em;
+    padding-top: 1em;
+    color: var(--primary-color);
 }
 #keypoints {
     display: flex;
@@ -170,8 +242,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border-right: #DFA005 1px solid; /*#030b20*/
-    border-left: #DFA005 1px solid;
+    border-right: var(--primary-color) 1px solid; 
+    border-left: var(--primary-color) 1px solid;
 }
 .keypoint i {
     font-size: 3.5em;
@@ -196,6 +268,6 @@ footer {
     font-size: 1.75em;
 }
 .social a {
-    color: #05102E;
+    color: var(--secondary-color);
     margin: 0 1em;
 }
