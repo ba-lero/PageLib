@@ -4,55 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@400;700&family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="scripts/menus.js" defer></script>
     <title>PageLib Contact</title>
 </head>
 <body>
     <header>
         <div class="header container">
-            <a href="index.html" class="logo" title="Accueil"><img src="img/Logo.png" alt="PageLib"></a>
-            <div class="header-divider"></div>
+            <div class="header-left">
+                <a href="index.html" class="logo" title="Accueil"><img src="img/Logo.png" alt="PageLib"></a>
+                <div class="search">
+                    <form name="search" action="livres.html" method="get">
+                        <input type="text" name="livre" placeholder="Rechercher un livre">
+                        <label>
+                            <input type="submit" style="display: none;">
+                            <i class="fas fa-search"></i>
+                        </label>
+                    </form>
+                </div>
+            </div>
             <nav>
-                    <a href="livres.html" title="Livres">Nos Livres</a>
-                    <a href="pres.html" title="Presentation">Qui sommes-nous ?</a>
-                    <a href="index.html" title="Accueil">Accueil</a>
-                    <a href="equipe.html" title="&Eacute;quipe">Notre équipe</a>
-                    <a href="contact.html" title="Contact">Nous contacter</a>
+                <a href="livres.html" title="Livres">Nos Livres</a>
+                <a href="pres.html" title="Presentation">Qui sommes-nous ?</a>
+                <a href="index.html" title="Accueil">Accueil</a>
+                <a href="equipe.html" title="&Eacute;quipe">Notre équipe</a>
+                <a href="contact.html" title="Contact">Nous contacter</a>
             </nav>
         </div>
     </header>
-    <main class="maincontact">
-        <div class="divcontactgauche">
-        <h2 class="headcontact">Téléphone : 06 64 57 05 24</h2>
-        <h2 class="headcontact">Mail : PageLib@gmail.com</h2>
-        <h2>Formulaire de contact :</h2>
-        <div class="divcontact">
-            <label for="text">Nom et Prénom :<br></label>
-            <input type="text" name="nom" id="nom">
+    <main>
+        <div class="contact container">
+            <div class="divcontactgauche">
+                <h2 class="headcontact">Téléphone : 06 64 57 05 24</h2>
+                <h2 class="headcontact">Mail : PageLib@gmail.com</h2>
+                <h2>Formulaire de contact :</h2>
+                <form action="#">
+                    <div class="contactformelement contactforminput">
+                        <label for="nom">Nom et Prénom :</label>
+                        <input type="text" name="nom" id="nom">
+                    </div>
+                    <div class="contactformelement contactforminput">
+                        <label for="mail">E-mail :</label>
+                        <input type="text" name="mail" id="mail">
+                    </div>
+                    <div class="contactformelement contactforminput">
+                        <label for="tel">Numéro de Téléphone :</label>
+                        <input type="text" name="tel" id="tel">
+                    </div>
+                    <textarea id="formulaire" class="contactformelement" name="formulaire" rows="10" cols="50" placeholder="Veuillez poser votre question"></textarea>
+                    <button type="button" id="contact-submit" class="btn">Envoyez</button>
+                </form>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.0030971329243!2d0.6869036658895902!3d47.39237244748478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd5b6c34c7857%3A0x499a60e45e67073e!2s2%20Rue%20de%20la%20Pr%C3%A9fecture%2C%2037000%20Tours!5e0!3m2!1sfr!2sfr!4v1636906487903!5m2!1sfr!2sfr" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-        <div class="divcontact">
-            <label for="text">E-mail :<br></label>
-            <input type="text" name="mail" id="mail">
-        </div>
-        <div class="divcontact">
-            <label for="text">Numéro de Téléphone :<br></label>
-            <input type="text" name="tel" id="tel">
-        </div>
-        <div class="divcontact">
-            <textarea id="formulaire" name="formulaire"
-          rows="10" cols="50" placeholder="Veuillez poser votre question"></textarea>
-        </div>
-        <div>
-            <button type="button" class="buttons">Envoyez</button>
-        </div>
-        </div>
-        <div class="divcontactdroite">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.0030971329243!2d0.6869036658895902!3d47.39237244748478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd5b6c34c7857%3A0x499a60e45e67073e!2s2%20Rue%20de%20la%20Pr%C3%A9fecture%2C%2037000%20Tours!5e0!3m2!1sfr!2sfr!4v1636906487903!5m2!1sfr!2sfr" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
     </main>
     <footer>
         <div class="footer container">

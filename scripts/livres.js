@@ -27,7 +27,7 @@ function displayMessage (msgType, livre = null) {
         msgText.innerHTML = 'Identifiant de recherche invalide'
     } else if (msgType == 'addSuccess') {
         msg.id = 'add-success'
-        msgText.innerHTML = `Livre ajouté avec succès. <a href="#${livre[0]}">Cliquez ici</a>`
+        msgText.innerHTML = `Livre ajouté avec succès. <a href="#${livre[0]}">Cliquez ici</a> pour vous y rendre`
     }
     msg.append(msgCloser, msgText)
     msgCloser.addEventListener('click', delPrecMsg)

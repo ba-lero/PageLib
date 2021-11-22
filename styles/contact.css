@@ -1,0 +1,38 @@
+#contact-submit {
+    background-color: var(--secondary-color);
+    color: var(--egg-shell-white);
+}
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+}
+.headcontact {
+    text-decoration: underline;
+}
+.divcontactgauche, 
+.divcontactgauche form, 
+.contactforminput {
+    display: flex;
+    flex-direction: column;
+}
+.divcontactgauche {
+    width: 40%;
+}
+.contactforminput, 
+.contactforminput input {
+    align-items: flex-start;
+    font-size: 1.2em;
+}
+.contactformelement {
+    margin-bottom: 2%;
+}
+.divcontactgauche form textarea {
+    font-size: 1.2em;
+}
+@media screen and (max-width: 1200px){
+    .divcontactgauche {
+        margin-bottom: 10%;
+    }
+}

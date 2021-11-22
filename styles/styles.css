@@ -71,7 +71,7 @@ header {
     font-family: 'Raleway', sans-serif;
 }
 .search i:hover, 
-footer i:hover {
+#links i:hover {
     opacity: 0.75;
     cursor: pointer;
 }
@@ -133,96 +133,21 @@ nav a:hover {
 
 main {
     font-weight: 400;
-    padding: 1em 0;
+    padding: 2em 0;
 }
 h1 {
     margin-top: 0;
     text-align: center;
-    color: var(--secondary-color);
     font-size: 2em;
 }
 h2 {
     font-size: 1.5em;
-    color: var(--secondary-color);
 }
 .main-divider {
     margin: 1em auto;
     width: 90%;
     height: 2px;
     background-color: var(--grey);
-}
-.divindex {
-    text-align: center;
-    background-image: url(/img/librairie.jpg);
-    background-size: cover;
-    padding: 15%;
-    padding-top: 5%;
-    margin: 0%;
-    color: #DFA005;
-}
-.pindex {
-    color: #e0e0e0;
-}
-.mainpres {
-    margin: 7%;
-}
-.listpres {
-    margin-top: 10px;
-}
-.mainequipe {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 3%;
-    justify-content: center;
-}
-.divequipe {
-    width: 30%;
-    margin: 10px;
-    background-color: #05102E;
-    color: #FEFEFE;
-    padding: 2%;
-}
-@media screen and (max-width: 1200px){
-    .divequipe {
-        width: 60%;
-        margin-bottom: 5%;
-        margin-top: 5%;
-    }
-}
-.headequipe {
-    text-align: center;
-    color: #DFA005;
-}
-.maincontact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 7%;
-}
-.headcontact {
-    text-decoration: underline;
-}
-.divcontact {
-    margin-top: 2%;
-}
-.divcontactgauche {
-    width: 40%;
-}
-.divcontacdroite {
-    width: 60%;
-}
-@media screen and (max-width: 1200px){
-    .divcontactgauche {
-        width: 100%;
-        margin-bottom: 10%;
-    }
-}
-.buttons {
-    text-align: center;
-    background-color: #05102E;
-    color: #FEFEFE;
-    border-radius: 10px;
-    padding: 0.5% 2%;
 }
 footer {
     background-color: var(--grey);
@@ -270,4 +195,17 @@ footer {
 .social a {
     color: var(--secondary-color);
     margin: 0 1em;
+}
+
+.btn {
+    color: var(--egg-shell-white);
+    font-size: 1.3em;
+    padding: 0.5em;
+    border-radius: 5pt;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+}
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.75;
 }

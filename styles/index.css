@@ -1,0 +1,13 @@
+main {
+    background-image: url(/img/librairie.jpg);
+    background-size: cover;
+}
+main .container {
+    text-align: center;
+    padding: 15%;
+    padding-top: 5%;
+    color: var(--primary-color);
+}
+main p {
+    color: #e0e0e0;
+}
