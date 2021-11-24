@@ -1,3 +1,31 @@
+livres = {
+    "harry_potter1" : {
+        "title" : "Harry Potter à l'école des sorciers",
+        "author" : "J.K. Rolling",
+        "summary" : "Harry Potter à l'école des sorciers (Harry Potter and the Philosopher's Stone) est le premier roman de la série littéraire centrée sur le personnage de Harry Potter, créé par J. K. Rowling. Sorti le 26 juin 19972, il est initialement tiré à 500 exemplaires. En France, le roman a été publié le 9 octobre 1998",
+        "imgSrc" : "img/covers/harry_potter1.jpg"
+    },
+    "1984" : {
+        "title" : "1984",
+        "author" : "George Orwell",
+        "summary" : "1984 (aussi appelé en anglais Nineteen Eighty-Four) est le plus célèbre roman de George Orwell, publié en 1949. Il décrit une Grande-Bretagne trente ans après une guerre nucléaire entre l'Est et l'Ouest censée avoir eu lieu dans les années 1950 et où s'est instauré un régime de type totalitaire fortement inspiré à la fois de certains éléments du stalinisme et du nazisme",
+        "imgSrc" : "img/covers/1984.jpg"
+    },
+    "hamlet": {
+        "title" : "Hamlet",
+        "author" : "William Shakespeare",
+        "summary" : "La Tragique histoire d'Hamlet, prince de Danemark (en anglais, The Tragedy of Hamlet, Prince of Denmark), plus couramment désigné sous le titre abrégé Hamlet, est la plus longue et l'une des plus célèbres pièces de William Shakespeare. La date exacte de sa composition n'est pas connue avec précision ; la première représentation se situe sûrement entre 1598 et 1601. Le texte fut publié en 1603.", 
+        "imgSrc" : "img/covers/hamlet.jpg"
+    },
+    "la_planete_des_singes": {
+        "title" : "La Planète des singes",
+        "author" : "Pierre Boulle",
+        "summary" : "La Planète des singes est un roman de science-fiction publié en janvier 1963 par l'écrivain français Pierre Boulle. Succès commercial, il est rapidement traduit dans de nombreuses langues.",
+        "imgSrc" : "img/covers/planete_des_singes.jpg"
+    }
+}
+
+
 // request GET arguments from URL
 
 var request = {};
@@ -85,22 +113,6 @@ function addDivider() {
 
 }
 
-// adding books to DOM from JSON file
-
-const xmlhttp = new XMLHttpRequest();
-xmlhttp.onload = function() {
-  const livres = JSON.parse(this.responseText);
-  livresList = Object.entries(livres)
-  let i = 1;
-  for (livre of livresList) {
-    addDivider()
-    addLivre(livre)
-    i++
-  }
-}
-xmlhttp.open("GET", "scripts/livreslist.json", true);
-xmlhttp.send();
-
 // store image when selected in the form
 
 const input = document.querySelector('input[name="new-book-cover"]')
@@ -125,6 +137,15 @@ function closeBookField (target) {
 function openBookField () {
     newBookField.classList.add('show')
     let title = newBookForm.querySelector('input[name="new-book-title"]').focus()
+}
+
+// adding books to DOM from JSON file
+
+livresList = Object.entries(livres)
+
+for (livre of livresList) {
+    addDivider()
+    addLivre(livre)
 }
 
 // new book field listeners

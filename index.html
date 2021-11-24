@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,13 +28,14 @@
                     </form>
                 </div>
             </div>
-            <nav>
+            <nav class="wide-nav">
                 <a href="livres.html" title="Livres">Nos Livres</a>
-                <a href="pres.html" title="Presentation">Qui sommes-nous ?</a>
+                <a href="pres.html" title="Presentation">À propos</a>
                 <a href="index.html" title="Accueil">Accueil</a>
                 <a href="equipe.html" title="&Eacute;quipe">Notre équipe</a>
                 <a href="contact.html" title="Contact">Nous contacter</a>
             </nav>
+            <div class="burger"><i class="fas fa-bars"></i></div>
         </div>
     </header>
     <main>
@@ -48,19 +49,19 @@
     <footer>
         <div class="footer container">
             <section id="keypoints">
-                <div class="keypoint">
+                <div class="keypoint" id="keypoint1">
                     <i class="fas fa-store"></i>
                     <p>Retour gratuit en magasin</p>
                 </div>
-                <div class="keypoint">
+                <div class="keypoint" id="keypoint2">
                     <i class="fas fa-truck"></i>
                     <p>Livraison 24h/24 7j/7</p>
                 </div>
-                <div class="keypoint">
+                <div class="keypoint" id="keypoint3">
                     <i class="fas fa-certificate"></i>
                     <p>Un conseil d'experts</p>
                 </div>
-                <div class="keypoint">
+                <div class="keypoint" id="keypoint4">
                     <i class="fas fa-credit-card"></i>
                     <p>Carte de Fidélité : Profitez de réduction !</p>
                 </div>
@@ -74,7 +75,18 @@
                     <a href="#" title="PageLib : Youtube"><i class="fab fa-youtube"></i></a>
                 </div>
             </section>
-        </footer>
         </div>
+    </footer>
+    <section id="fixed-elements">
+        <div class="burger-nav-background">
+            <nav class="burger-nav">
+                <a href="livres.html" title="Livres">Nos Livres</a>
+                <a href="pres.html" title="Presentation">À propos</a>
+                <a href="index.html" title="Accueil">Accueil</a>
+                <a href="equipe.html" title="&Eacute;quipe">Notre équipe</a>
+                <a href="contact.html" title="Contact">Nous contacter</a>
+            </nav>
+        </div>
+    </section>
 </body>
 </html>
