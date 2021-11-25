@@ -1,9 +1,8 @@
-main {
+.equipe {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .employe {
     width: 30%;
     margin: 10px;
