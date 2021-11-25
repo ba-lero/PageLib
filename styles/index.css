@@ -22,7 +22,7 @@ h2 {
 .gridindexnouv {
     display: grid;
     grid-template-columns: 1em 1fr 1fr 1fr 1fr 1em;
-    grid-template-rows: 1em 375px 1em;
+    grid-template-rows: 1em auto 1em;
     grid-column-gap: 1em;
     background-color: #e0e0e0;
     color: black;
@@ -55,7 +55,7 @@ h2 {
 .gridindexcoeur {
     display: grid;
     grid-template-columns: 1em 1fr 1fr 1fr 1fr 1em;
-    grid-template-rows: 1em 375px 1em;
+    grid-template-rows: 1em auto 1em;
     grid-column-gap: 1em;
     background-color: #e0e0e0;
     color: black;
@@ -115,7 +115,7 @@ h2 {
 }
 @media screen and (max-width: 1100px){
     .gridindexnouv {
-    grid-template-rows: 1em 300px 300px 1em;
+    grid-template-rows: 1em auto auto 1em;
     grid-row-gap:1em ;
     }
     .descun {
@@ -130,7 +130,7 @@ h2 {
         grid-row: 3;
     }
     .gridindexcoeur {
-        grid-template-rows: 1em 300px 300px 1em;
+        grid-template-rows: 1em auto auto 1em;
         grid-row-gap: 1em;
     }
     .desctrois {
@@ -148,7 +148,7 @@ h2 {
 @media screen and (max-width: 800px){
     .gridindexnouv {
         grid-template-columns: 1em 30px 1fr 200px 1fr 30px 1em;
-        grid-template-rows: 1em 280px 200px 280px 200px 1em;
+        grid-template-rows: 1em auto auto auto auto 1em;
         grid-row-gap: 2em;
     }
     .livreun {
@@ -168,7 +168,8 @@ h2 {
     }
     .gridindexcoeur {
         grid-template-columns: 1em 30px 1fr 200px 1fr 30px 1em;
-        grid-template-rows: 1em 280px 200px 280px 200px 1em;
+        grid-template-rows: 1em auto auto auto auto 1em;
+
         grid-row-gap: 2em;
     }
     .livretrois {
@@ -188,11 +189,12 @@ h2 {
     }
     .gridindexblog {
         grid-template-columns: 1em 30px 1fr 150px 1fr 30px 1em;
-        grid-template-rows: 1em 280px 400px 100px 100px 1em;
+        grid-template-rows: 1em auto auto auto auto 1em;
         grid-row-gap: 2em;
     }
     .blogimage {
         grid-column: 4;
+        grid-row: 2/3;
     }
     .blogtext {
         grid-column: 2/7;
@@ -208,7 +210,7 @@ h2 {
     @media screen and (max-width: 450px){
         .gridindexnouv {
             grid-template-columns: 1em 30px 1fr 30px 1em;
-            grid-template-rows: 1em 280px 400px 280px 300px 1em;
+            grid-template-rows: 1em auto auto auto auto 1em;
             grid-row-gap: 2em;
         }
         .livreun {
@@ -228,7 +230,7 @@ h2 {
         }
         .gridindexcoeur {
             grid-template-columns: 1em 30px 1fr 30px 1em;
-            grid-template-rows: 1em 280px 400px 280px 300px 1em;
+            grid-template-rows: 1em auto auto auto auto 1em;
             grid-row-gap: 2em;
         }
         .livretrois {
@@ -248,7 +250,7 @@ h2 {
         }
         .gridindexblog {
             grid-template-columns: 1em 30px 1fr 30px 1em;
-            grid-template-rows: 1em 280px 500px 100px 100px 1em;
+            grid-template-rows: 1em auto auto auto auto 1em;
             grid-row-gap: 2em;
         }
         .blogimage {

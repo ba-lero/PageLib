@@ -19,7 +19,7 @@ html {
 
 body {
     margin: 0;
-    padding-top: 10em;
+    padding-top: 9.5em;
 }
 
 .container {
@@ -90,41 +90,100 @@ header {
     background-color: var(--egg-shell-white);
     height: 2px;
 }
+.burger {
+    text-align: center;
+    flex: 0 1 10%;
+    font-size: 2.5em;
+    display: none;
+}
+.burger i:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
 nav {
+    font-family: 'Mohave', sans-serif;
+}
+.wide-nav {
     width: 100%;
-    flex: 1 1 100%;
-    transition: flex 0.2s ease-in-out;
+    flex: 1 1;
+    flex-basis: 100%;
+    transition: flex-basis 0.2s ease-in-out;
     display: flex;
     justify-content: space-between;
     font-weight: 500;
 }
-nav a {
+.wide-nav a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    transition: font-size 0.2s ease-in-out;
+    padding: 1em 0.5em ;
+    flex: 1 1 20%;
+    color: var(--egg-shell-white);
+    border-right: var(--secondary-border-color) 1px dashed; 
+    border-left: var(--secondary-border-color) 1px dashed;
+}
+.wide-nav a:last-child, 
+.wide-nav a:last-child:hover {
+    border-right: none;
+}
+
+.wide-nav a:hover {
+    background-color: var(--secondary-lighter-color);
+    border-right: white 1px solid;
+    border-left: white 1px solid;
+}
+.burger-nav-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: animate-fixed-bg 0.5s ease-in-out;
+}
+.burger-nav {
+    background-color: var(--secondary-color);
+    padding-top: 8em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    animation: animate-fixed-content 0.5s ease-in-out;
+}
+.burger-nav a {
     text-decoration: none;
     text-align: center;
     font-size: 1.2em;
     transition: font-size 0.2s ease-in-out;
     padding: 1em 0 ;
-    flex: 1 1 20%;
-    color: var(--white);
+    color: var(--egg-shell-white);
     border-right: var(--secondary-border-color) 1px dashed; 
     border-left: var(--secondary-border-color) 1px dashed;
 }
-nav a:last-child, 
-nav a:last-child:hover {
-    border-right: none;
+.show {
+    display: block;
 }
-
-nav a:hover {
-    background-color: var(--secondary-lighter-color);
-    border-right: white 1px solid;
-    border-left: white 1px solid;
+@keyframes animate-fixed-bg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes animate-fixed-content {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0;
+    }
 }
 
 .header-shrink .logo img {
     width: 70px;
-}
-.header-shrink nav {
-    flex: 1 1 60%;
 }
 .header-shrink nav a, 
 .header-shrink .search {
@@ -160,8 +219,10 @@ footer {
 #keypoints {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .keypoint {
+    padding: 0.5em;
     padding-top: 1.5em;
     flex: 1 0;
     display: flex;
@@ -197,6 +258,47 @@ footer {
     margin: 0 1em;
 }
 
+.link-back {
+    position: fixed;
+    bottom: -15%;
+    right: 20px;
+    transition: bottom 0.5s ease-in-out;
+}
+.link-back-rect {
+    fill:var(--primary-color);
+}
+.link-back-triangle {
+    fill:white; 
+    stroke:white; 
+    stroke-width:10; 
+    stroke-linejoin: round;
+}
+.display-lb {
+    bottom: 20px;
+    right: 20px;
+    animation-name: lb-wiggle;
+    animation-duration: 2s;
+    animation-iteration-count:infinite; 
+}
+
+@keyframes lb-wiggle{
+    from {
+        transform:rotate(0);
+    }
+    1% {
+        transform:rotate(15deg);
+    }
+    2%{
+        transform:rotate(-15deg);
+    }
+    3%{
+        transform:rotate(15deg);
+    }
+    4%,100%{
+        transform:rotate(0);
+    }
+}
+
 .btn {
     color: var(--egg-shell-white);
     font-size: 1.3em;
@@ -208,4 +310,72 @@ footer {
 .btn:hover {
     cursor: pointer;
     opacity: 0.75;
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        font-size: 0.8em;
+    }
+    .logo img {
+        width: 100px;
+    }
+    body {
+        padding-top: 7.5em;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .wide-nav {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+}
+@media screen and (max-width: 850px) {
+    .keypoint {
+        flex-basis: 50%;
+    }
+    #keypoint1 {
+        border: none;
+        border-right: var(--primary-color) 1px solid;
+        border-bottom: var(--primary-color) 1px solid;
+    }
+    #keypoint2 {
+        border: none;
+        border-left: var(--primary-color) 1px solid;
+        border-bottom: var(--primary-color) 1px solid;
+    }
+    #keypoint3 {
+        border: none;
+        border-right: var(--primary-color) 1px solid;
+        border-top: var(--primary-color) 1px solid;
+    }
+    #keypoint4 {
+        border: none;
+        border-left: var(--primary-color) 1px solid;
+        border-top: var(--primary-color) 1px solid;
+    }
+}
+@media screen and (max-width: 600px) {
+    .keypoint {
+        flex-basis: 100%;
+    }
+    #keypoint1, #keypoint2, #keypoint3, #keypoint4 {
+        border: none;
+        border-bottom: var(--primary-color) 1px solid;
+    }
+    #keypoint4 {
+        border-bottom: none;
+    }
+}
+@media screen and (max-width: 450px) {
+    .logo {
+        margin-right: 0;
+    }
+    .logo img {
+        width: 75px;
+    }
+    body {
+        padding-top: 6em;
+    }
 }

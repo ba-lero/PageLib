@@ -36,12 +36,14 @@ h1, h2 {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    gap: 10px;
 }
 .livre .img-container {
     overflow: hidden;
     width: 150px;
     max-height: 225px;
-
+    display: flex;
+    justify-content: center;
 }
 .livre .img-container img {
     width: 150px;
@@ -81,11 +83,11 @@ h1, h2 {
     z-index: 100;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     animation: animate-ajout-bg 0.5s ease-in-out;
 }
-.show {
+.show-ajout {
     display: block;
 }
 .ajout {
@@ -160,4 +162,33 @@ h1, h2 {
     right: 0.5em;
     font-size: 2em;
     color: var(--primary-color);
+}
+
+@media screen and (max-width:1000px) {
+    .livre {
+        flex-direction: column;
+    }
+    .msg {
+        margin: 0 auto 1em;
+    }
+    .livre-title-group {
+        flex-direction: column;
+        margin-bottom: 2em;
+    }
+}
+@media screen and (max-width:800px) {
+    .ajout {
+        width: 100%;
+    }
+    .ajout input, 
+    .ajout textarea{
+        width: 100%;
+    }
+}
+@media screen and (max-width:650px) {
+    #open-new-book {
+        position: relative;
+        left: 50%;
+        transform : translate(-50%, 0);
+    }
 }
