@@ -19,7 +19,6 @@ html {
 
 body {
     margin: 0;
-    padding-top: 9.5em;
 }
 
 .container {
@@ -192,7 +191,9 @@ nav {
 
 main {
     font-weight: 400;
-    padding: 2em 0;
+    padding: 0;
+    padding-top: 11.5em;
+    padding-bottom: 2em;
 }
 h1 {
     margin-top: 0;
@@ -319,8 +320,8 @@ footer {
     .logo img {
         width: 100px;
     }
-    body {
-        padding-top: 7.5em;
+    main {
+        padding-top: 9.5em;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -375,7 +376,7 @@ footer {
     .logo img {
         width: 75px;
     }
-    body {
-        padding-top: 6em;
+    main {
+        padding-top: 8em;
     }
 }
