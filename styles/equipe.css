@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3%;
+    justify-content: center;
+}
+
+.employe {
+    width: 30%;
+    margin: 10px;
+    background-color: #05102E;
+    color: #FEFEFE;
+    padding: 2%;
+}
+.employe h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+@media screen and (max-width: 1200px){
+    .employe {
+        width: 60%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+}

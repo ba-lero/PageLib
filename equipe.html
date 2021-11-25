@@ -4,40 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/equipe.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@400;700&family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="scripts/menus.js" defer></script>
     <title>PageLib Equipe</title>
 </head>
 <body>
     <header>
         <div class="header container">
-            <a href="index.html" class="logo" title="Accueil"><img src="img/Logo.png" alt="PageLib"></a>
-            <div class="header-divider"></div>
+            <div class="header-left">
+                <a href="index.html" class="logo" title="Accueil"><img src="img/Logo.png" alt="PageLib"></a>
+                <div class="search">
+                    <form name="search" action="livres.html" method="get">
+                        <input type="text" name="livre" placeholder="Rechercher un livre">
+                        <label>
+                            <input type="submit" style="display: none;">
+                            <i class="fas fa-search"></i>
+                        </label>
+                    </form>
+                </div>
+            </div>
             <nav>
-                    <a href="livres.html" title="Livres">Nos Livres</a>
-                    <a href="pres.html" title="Presentation">Qui sommes-nous ?</a>
-                    <a href="index.html" title="Accueil">Accueil</a>
-                    <a href="equipe.html" title="&Eacute;quipe">Notre équipe</a>
-                    <a href="contact.html" title="Contact">Nous contacter</a>
+                <a href="livres.html" title="Livres">Nos Livres</a>
+                <a href="pres.html" title="Presentation">Qui sommes-nous ?</a>
+                <a href="index.html" title="Accueil">Accueil</a>
+                <a href="equipe.html" title="&Eacute;quipe">Notre équipe</a>
+                <a href="contact.html" title="Contact">Nous contacter</a>
             </nav>
         </div>
     </header>
-    <main class="mainequipe">
-        <div class="divequipe">
-            <h2 class="headequipe">Quentin Delagale</h2>
+    <main>
+        <div class="employe">
+            <h2>Quentin Livre</h2>
             <p>Passionné de littérature depuis l'âge de 6 ans, Quentin est un véritable bibliophile, que ce soit Romans, BD, Mangas, ou même Œuvres classiques et contemporaines. Après avoir rencontré Martin tout aussi passioné de lecture que lui, il a décidé de créer PageLib en collaboration avec son nouveau partenaire.</p>
         </div>
-        <div class="divequipe">
-            <h2 class="headequipe">Martin Delalèpre</h2>
-            <p>Contrairement à son collaborateur Martin a découvert sa vocation dans le domaine des livres bien plus tard à l'âge de 14 ans, sous l'obligation de son professeur de français au collège il a découvert les classiques de la littérature française et depuis il ne s'est plus arrété. Plus spécialisé dans la lecture et l'analyse des œuvres classiques et contemporaines que Quentin cela ne l'a pas empêché d'ouvrir la librairie en ligne PageLib avec ce dernier afin de partager sa passion pour les grands classiques.</p>
+        <div class="employe">
+            <h2>Martin Bibliothèque</h2>
+            <p>Contrairement à son collaborateur Martin a découvert sa vocation dans le domaine des livres bien plus tard à l'âge de 14 ans. C'est sous l'obligation de son professeur de français au collège qu'il a découvert les classiques de la littérature française et depuis il ne s'est plus arrété. Plus spécialisé dans la lecture et l'analyse des œuvres classiques et contemporaines que Quentin, cela ne l'a pas empêché d'ouvrir la librairie en ligne PageLib avec ce dernier afin de partager sa passion pour les grands classiques.</p>
         </div>
-        <div class="divequipe">
-            <h2 class="headequipe">Bernard Delapeste</h2>
-            <p>Contrairement à nos deux grands fans de littérature Bernard est plus modéré dans son approche des livres, il a tendance à moins lire que ses employeurs mais ça ne l'empêche pas de connaître chaque livre du site PageLib comme sa poche. Conseiller professionnel dans le cadre de la page de contact, il accompagne tout les clients qui sont dans le besoin.</p>
+        <div class="employe">
+            <h2>Bernard Couverture</h2>
+            <p>Contrairement à nos deux grands fans de littérature, Bernard est plus modéré dans son approche des livres. Il a tendance à moins lire que ses employeurs mais ça ne l'empêche pas de connaître chaque livre du site PageLib comme sa poche. Conseiller professionnel dans le cadre de la page de contact, il accompagne tous les clients qui sont dans le besoin.</p>
         </div>
     </main>
     <footer>
