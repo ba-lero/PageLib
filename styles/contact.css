@@ -36,3 +36,14 @@
         margin-bottom: 10%;
     }
 }
+@media screen and (max-width: 570px){
+    .divcontactgauche {
+        margin-bottom: 10%;
+    }
+    .divcontactgauche form textarea {
+        font-size: 0.8em;
+    }
+    .contactformelement {
+        margin-bottom: 7%;
+    }
+}
