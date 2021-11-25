@@ -258,6 +258,47 @@ footer {
     margin: 0 1em;
 }
 
+.link-back {
+    position: fixed;
+    bottom: -15%;
+    right: 20px;
+    transition: bottom 0.5s ease-in-out;
+}
+.link-back-rect {
+    fill:var(--primary-color);
+}
+.link-back-triangle {
+    fill:white; 
+    stroke:white; 
+    stroke-width:10; 
+    stroke-linejoin: round;
+}
+.display-lb {
+    bottom: 20px;
+    right: 20px;
+    animation-name: lb-wiggle;
+    animation-duration: 2s;
+    animation-iteration-count:infinite; 
+}
+
+@keyframes lb-wiggle{
+    from {
+        transform:rotate(0);
+    }
+    1% {
+        transform:rotate(15deg);
+    }
+    2%{
+        transform:rotate(-15deg);
+    }
+    3%{
+        transform:rotate(15deg);
+    }
+    4%,100%{
+        transform:rotate(0);
+    }
+}
+
 .btn {
     color: var(--egg-shell-white);
     font-size: 1.3em;
