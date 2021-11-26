@@ -31,6 +31,10 @@ h1, h2 {
     position: relative;
 }
 
+.anchor{
+    position: absolute;
+    transform: translateY(-50vh);
+  }
 .livre {
     display: flex;
     align-items: center;

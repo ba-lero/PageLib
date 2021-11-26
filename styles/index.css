@@ -1,5 +1,5 @@
 main {
-    background-image: url(/img/librairie.jpg);
+    background-image: url(../img/librairie.jpg);
     background-size: cover;
 }
 main .container {
